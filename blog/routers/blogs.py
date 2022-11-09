@@ -14,7 +14,7 @@ from blog.schemas.responses import ArticleResponse, CommentResponse
 blog_router = Router()
 
 
-@blog_router.post('/articles/create/', auth=AuthBearer(), tags=['article'])
+@blog_router.post('/articles/create/', auth=AuthBearer(), tags=['articles'])
 def create_article(request, body: ArticleRequest):
     data = body.dict()
     try:
