@@ -4,10 +4,6 @@ from django.shortcuts import get_object_or_404
 from ninja import Router
 from ninja.pagination import paginate, LimitOffsetPagination
 
-
-
-
-
 from blog.auth.validate_token import AuthBearer
 from blog.models import Article, Comment
 from blog.repository import get_all_articles, get_all_comments
