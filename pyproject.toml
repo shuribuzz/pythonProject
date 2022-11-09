@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "plints"
+version = "0.1.0"
+description = "Bla"
+authors = ["Alexander Pokh <a.poh@napoleonit.ru>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pylint = "^2.15.5"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
