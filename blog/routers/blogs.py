@@ -1,10 +1,9 @@
 from typing import List
+
 from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404
 from ninja import Router
-from ninja.pagination import paginate, LimitOffsetPagination
-
-
+from ninja.pagination import LimitOffsetPagination, paginate
 
 from blog.auth.validate_token import AuthBearer
 from blog.models import Article, Comment
@@ -64,6 +63,6 @@ def get_articles(request):
     return comments
 
 
-@blog_router.get("/blog/{post_id}")
+@blog_router.get('/blog/{post_id}')
 async def search(request, post_id: int):
     blog = await Comment.objects.aget(pk=post_id)

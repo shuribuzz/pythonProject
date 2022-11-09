@@ -14,3 +14,48 @@ pre-commit = "^2.20.0"
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.pylint.master]
+ignore=[".migrations", "tests"]
+jobs=1
+suggestion-mode="yes"
+
+[tool.pylint.design]
+max-parents=15
+
+[tool.pylint.format]
+max-line-length=120
+
+[tool.pylint.messages_control]
+disable=[
+    "C0115",    # missing-class-docstring
+    "C0114",    # missing-module-docstring
+    "C0116",    # missing-function-docstring
+    "W0613",    # unused-argument
+    "C0103",    # invalid-name
+    "W0150",    # lost-exception
+    "R0903",    # too-few-public-methods
+    "R0904",    # too-many-public-methods
+    "R0902",    # too-many-instance-attributes
+    "R0913",    # too-many-arguments
+    "R0801"     # duplicate-code
+]
+
+[tool.pylint.similarities]
+ignore-imports="yes"
+
+[tool.pylint.reports]
+output-format="parseable"
+reports="no"
+
+[tool.pylint.basic]
+bad-names=[
+    "foo",
+    "bar",
+    'baz',
+]
+include-naming-hint="yes"
+
+[tool.pylint.string]
+check-quote-consistency="no"
+check-str-concat-over-line-jumps="yes"

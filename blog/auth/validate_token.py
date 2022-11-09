@@ -1,5 +1,6 @@
-from ninja.security import HttpBearer
 import jwt
+from ninja.security import HttpBearer
+
 from core import settings
 
 
