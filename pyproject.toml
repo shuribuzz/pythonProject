@@ -7,6 +7,7 @@ authors = ["Alexander Pokh <a.poh@napoleonit.ru>"]
 [tool.poetry.dependencies]
 python = "^3.10"
 pylint = "^2.15.5"
+pre-commit = "^2.20.0"
 
 [tool.poetry.dev-dependencies]
 
